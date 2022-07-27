@@ -1,0 +1,196 @@
+:root {
+  --clr-primary-dark-cyan: hsl(158, 36%, 37%);
+  --clr-primary-dark: hsl(156, 42%, 18%);
+  --clr-primary-cream: hsl(30, 38%, 92%);
+  --clr-neutral-very-dark-blue: hsl(212, 21%, 14%);
+  --clr-neutral-dark-greyish-blue: hsl(228, 12%, 48%);
+  --clr-neutral-white: hsl(0, 0%, 100%);
+  --fs-p: 14px;
+  --ff-primary: "Montserrat", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  --ff-secondary: "Fraunces", Georgia, "Times New Roman", Times, serif;
+}
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role=list],
+ol[role=list] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  -webkit-text-decoration-skip: ink;
+          text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+  *,
+*::before,
+*::after {
+    -webkit-animation-duration: 0.01ms !important;
+            animation-duration: 0.01ms !important;
+    -webkit-animation-iteration-count: 1 !important;
+            animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+body {
+  background-color: var(--clr-primary-cream);
+}
+
+.container {
+  max-width: 600px;
+  margin: 275px auto;
+  display: flex;
+  border-radius: 10px;
+  background-color: var(--clr-neutral-white);
+}
+
+.card-description {
+  padding: 20px 30px;
+}
+
+.logo-title {
+  font-weight: 100;
+  font-size: 0.8125rem;
+  font-family: var(--ff-primary);
+  line-height: 1;
+  letter-spacing: 0.25rem;
+  color: var(--clr-neutral-dark-greyish-blue);
+  padding-bottom: 5px;
+}
+
+.title {
+  font-family: var(--ff-secondary);
+  line-height: 1;
+  padding: 20px 20px 15px 0px;
+}
+
+.description {
+  font-family: var(--ff-primary);
+  padding: 10px 0px 25px 0;
+  color: var(--clr-neutral-dark-greyish-blue);
+}
+
+.price {
+  display: flex;
+  align-items: center;
+}
+.price .n-price {
+  font-family: var(--ff-secondary);
+  color: var(--clr-primary-dark-cyan);
+  font-size: 2rem;
+  font-weight: 700;
+  padding-right: 15px;
+}
+.price .o-price {
+  padding-top: 10px;
+  text-decoration: line-through;
+  font-family: var(--ff-primary);
+  font-size: 0.9rem;
+  color: var(--clr-neutral-dark-greyish-blue);
+}
+
+.button {
+  border: none;
+  width: 100%;
+  padding: 14px 0;
+  margin-top: 20px;
+  border-radius: 10px;
+  background: var(--clr-primary-dark-cyan);
+  color: var(--clr-neutral-white);
+  font-family: var(--ff-primary);
+  font-size: 0.9rem;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+.button .product-icon {
+  margin-right: 10px;
+}
+
+.button:hover {
+  background-color: var(--clr-primary-dark);
+}
+
+.card-image {
+  min-width: 300px;
+}
+.card-image .mobile-img {
+  display: none;
+}
+.card-image img {
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+@media (max-width: 720px) {
+  .container {
+    max-width: 400px;
+    flex-direction: column;
+    margin: 125px auto;
+  }
+  .card-image img {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 0px;
+  }
+  .card-image .desktop-img {
+    display: none;
+  }
+  .card-image .mobile-img {
+    display: block;
+  }
+}/*# sourceMappingURL=main.css.map */

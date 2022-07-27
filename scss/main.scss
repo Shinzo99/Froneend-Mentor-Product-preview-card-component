@@ -1,0 +1,130 @@
+@import 'base/root.scss';
+@import 'base/reset.scss';
+
+body {
+    background-color: var(--clr-primary-cream);
+}
+
+.container {
+    max-width: 600px;
+    margin: 275px auto;
+
+    display: flex;
+
+    border-radius: 10px;
+    background-color: var(--clr-neutral-white);
+}
+
+.card-description {
+    padding: 20px 30px;
+}
+
+.logo-title {
+    font-weight: 100;
+    font-size: 0.8125rem;
+    font-family: var(--ff-primary);
+    line-height: 1;
+    letter-spacing: 0.25rem;
+    color: var(--clr-neutral-dark-greyish-blue);
+    padding-bottom: 5px;
+}
+
+.title {
+    font-family: var(--ff-secondary);
+    line-height: 1;
+    padding: 20px 20px 15px 0px;
+}
+
+.description {
+    font-family: var(--ff-primary);
+    padding: 10px 0px 25px 0;
+    color: var(--clr-neutral-dark-greyish-blue);
+}
+
+.price {
+
+    display: flex;
+    align-items: center;
+
+    .n-price {
+        font-family: var(--ff-secondary);
+        color: var(--clr-primary-dark-cyan);
+        font-size: 2rem;
+        font-weight: 700;
+        padding-right: 15px;
+    }
+
+    .o-price {
+        padding-top: 10px;
+        text-decoration: line-through;
+        font-family: var(--ff-primary);
+        font-size: 0.9rem;
+        color: var(--clr-neutral-dark-greyish-blue);
+    }
+}
+
+.button {
+    border: none;
+    width: 100%;
+    padding: 14px 0;
+    margin-top: 20px;
+    border-radius: 10px;
+    background: var(--clr-primary-dark-cyan);
+    color: var(--clr-neutral-white);
+    font-family: var(--ff-primary);
+    font-size: 0.9rem;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+
+    .product-icon {
+        margin-right: 10px;
+    }
+}
+
+.button:hover {
+    background-color: var(--clr-primary-dark);
+}
+
+
+
+.card-image {
+    min-width: 300px;
+    
+    .mobile-img {
+        display: none;
+    }
+
+    img {
+        border-top-left-radius: 10px;
+        border-bottom-left-radius: 10px;
+    }
+}
+
+@media (max-width : 720px) {
+        
+    .container {
+        max-width: 400px;
+        flex-direction: column;
+        margin: 125px auto;
+    }
+
+    .card-image {
+        
+        img {
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+            border-bottom-left-radius: 0px;
+        }
+
+        .desktop-img {
+            display: none;
+        }
+
+        .mobile-img {
+            display: block;
+        }
+    }
+}
